@@ -1,0 +1,133 @@
+---
+description: Professional testing and documentation standards for all future work
+alwaysApply: true
+---
+
+# Professional Testing + Documentation Standards
+
+Apply these standards on every future request unless explicitly disabled.
+
+## Core Expectations
+- Treat deliverables as **code + tests + documentation + verification + review readiness**.
+- Never treat implementation code as the only output.
+- Evaluate and communicate testability before marking work complete.
+
+## Required Quality Lens
+Evaluate each task for:
+- test coverage
+- reviewability
+- maintainability
+- operational clarity
+- developer handoff quality
+- documentation sufficiency
+
+## Testability Review (Required)
+Before completion, include:
+- **Can This Be Unit Tested?** Yes / No / Partial
+- **Why**
+- **Recommended Test Layers** (Unit / Integration / Component / End-to-end / Manual)
+- likely regression areas
+
+## Testing Strategy (Required)
+Use a practical pyramid and justify choices:
+1. Unit tests (default)
+2. Integration or component tests (interactions)
+3. End-to-end tests (critical journeys only)
+4. Manual verification (for unavoidable gaps)
+
+When logic is reasonably testable, add automated tests:
+- business logic, validation, utilities, reducers/state: unit tests by default
+- services/APIs: unit or integration tests
+- UI: component tests when practical
+- critical flows: integration coverage
+
+## Test Quality Rules
+Tests must be:
+- deterministic
+- readable
+- maintainable
+- low-flake
+- meaningful
+
+Prefer:
+- clear naming
+- focused assertions
+- minimal mocking
+- stable setup
+
+Avoid:
+- brittle snapshots
+- redundant tests
+- testing internals without behavior value
+
+## Testing Decision Documentation (Required)
+For non-trivial work, include:
+- **Tests Added**
+- **Why These Tests**
+- **Why Other Tests Were Not Added**
+- **Remaining Risks / Gaps**
+
+## Implementation Documentation (Required)
+For non-trivial work, include:
+- **How It Works**
+  - Overview
+  - Internal Flow
+  - Important Abstractions
+  - Assumptions
+  - Maintenance Notes
+- **Developer Notes**
+  - Files / Modules Affected
+  - Responsibilities
+  - Where Tests Live
+  - How to Extend Safely
+  - Follow-Up Opportunities
+
+## Usage + Verification Documentation (Required)
+Include:
+- **How to Run**
+- **How to Run Tests**
+- **How to Validate**
+- **Expected Results**
+- **Edge Cases**
+
+## CI / Review Awareness (Required)
+Include:
+- **Suggested Checks**: lint, typecheck, unit tests, integration tests, build
+- **Reviewer Focus Areas**
+- **Coverage Notes**
+
+## Documentation Level Guidance
+Use the right level:
+- comments for local clarity gaps
+- README for usage and setup
+- module docs for architecture
+- ADR-style notes for significant decisions
+
+Do not over-document trivial code.
+
+## Required Non-Trivial Task Output
+Every non-trivial task should include:
+1. Testability Review
+2. Testing Decision
+3. How It Works
+4. Developer Notes
+5. Usage / Verification
+6. CI / Review Notes
+7. Done Check
+
+## Done Check (Required)
+- [ ] Implementation complete
+- [ ] Testability evaluated
+- [ ] Tests added where appropriate
+- [ ] Documentation added
+- [ ] Verification steps included
+- [ ] Known gaps documented
+
+## Hard Rules
+Do not:
+- skip testability evaluation
+- skip tests without explanation
+- skip documentation
+- mark complete without verification
+- generate low-quality tests
+- leave gaps undocumented

@@ -1,0 +1,38 @@
+---
+description: Agile and GitHub operating workflow for all non-trivial tasks
+alwaysApply: true
+---
+
+# Agile + GitHub Operating System
+
+Apply this workflow for every non-trivial request before implementation.
+
+## Required Sequence
+1. GitHub Issue
+2. Work Breakdown
+3. Git Workflow
+4. Task Board
+5. Implementation
+6. PR Review Notes
+7. Definition of Done
+8. Iteration Closeout
+
+## Mandatory Structure
+- **GitHub Issue**: Title, Problem, Goal, Business Value, Scope, Out of Scope, Acceptance Criteria, Risks/Unknowns.
+- **Work Breakdown**: Current Issue, prioritized Subtasks, Deferred Backlog.
+- **Git Workflow**: scoped branch name, atomic commit plan, PR title, PR summary.
+- **Task Board**: keep statuses updated using `[ ]`, `[~]`, `[x]`, `[!]`.
+- **PR Review Notes**: What Changed, Why It Changed, How to Verify, Risks, Follow-Up Work.
+- **Definition of Done**: verify acceptance criteria, code completeness, edge cases, tests, maintainability, PR summary, deferred work.
+- **Iteration Closeout**: Completed, Verification Result, Remaining Backlog, Next Recommended Issue, Suggested Branch.
+
+## Operating Rules
+- Start with objective, business value, scope boundaries, acceptance criteria, and risks.
+- Do not skip acceptance criteria for non-trivial tasks.
+- Separate MVP from extras; defer non-essential work to backlog.
+- Keep commits specific and non-mixed; avoid vague commit messages.
+- Do not mark complete without validation.
+- If requirements change, add **Scope Change Review** with Change, Impact, Action, Backlog Item.
+
+## Trivial Task Adaptation
+- Use a compressed format, but keep clarity, scope, and validation.

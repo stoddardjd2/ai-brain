@@ -1,0 +1,44 @@
+---
+description: Clarity-first code readability and maintainability standards
+alwaysApply: true
+---
+
+# Code Readability And Maintainability Standards
+
+## Core Principle
+- Code must be easy for a human to read, understand, and modify without extra explanation.
+
+## Clarity First
+- Prefer clear, explicit logic over clever or dense expressions.
+- Favor straightforward control flow and readable structure.
+- Avoid unnecessary abstractions and indirection.
+- Keep implementations as simple as the requirements allow.
+
+## Naming
+- Use descriptive names that communicate intent immediately.
+- Name variables for what they hold and functions for what they do.
+- Avoid vague names like `data`, `temp`, and `value` unless tightly scoped and obvious.
+- Avoid non-standard abbreviations unless they are broadly recognized.
+
+## Maintainable Structure
+- Write small, focused functions with one clear responsibility.
+- Keep related logic together and separate unrelated concerns.
+- Prefer composition over deeply nested branching when practical.
+- Minimize hidden side effects; make state changes explicit.
+
+## Comments And Documentation
+- Add comments only when intent is not obvious from the code itself.
+- Explain why a decision exists, not what obvious code is doing.
+- Keep comments accurate, concise, and updated with code changes.
+- Do not add excessive or noisy comments.
+
+## Complexity And Safety
+- Optimize for readability first; optimize performance when required by evidence.
+- Handle edge cases deliberately and keep failure paths understandable.
+- Use consistent patterns within a file and across the codebase.
+- Prefer code that is easy to review, test, and safely modify.
+
+## Output Quality Expectations
+- Deliver production-quality code that is readable by default.
+- Include tests and documentation updates when changes are non-trivial.
+- Highlight trade-offs and assumptions when they affect maintainability.
